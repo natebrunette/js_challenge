@@ -8,27 +8,33 @@ angular.module('jsChallengeGamesService', ['ngResource']).
             {
                 apiKey: '67a290080f4fee82f5dd4371d43bfa46',
                 action: '@action',
-                callback: 'JSON_CALLBACK'
+                callback: 'serviceCallback'
             },
             {
+                checkKey: {
+                    method: 'JSONP',
+                    params: { action: 'checkKey' }
+                },
                 getGames: {
                     method: 'JSONP',
-                    params: {
-                        action: 'getGames'
-                    },
+                    params: { action: 'getGames' },
                     isArray: true
                 },
                 addVote: {
                     method: 'JSONP',
-                    params: {
-                        action: 'addVote'
-                    }
+                    params: { action: 'addVote' }
                 },
                 addGame: {
                     method: 'JSONP',
-                    params: {
-                        action: 'addGame'
-                    }
+                    params: { action: 'addGame' }
+                },
+                markOwned: {
+                    method: 'JSONP',
+                    params: { action: 'setGotIt' }
+                },
+                clearGames: {
+                    method: 'JSONP',
+                    params: { action: 'clearGames' }
                 }
             }
         );

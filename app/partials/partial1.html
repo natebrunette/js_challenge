@@ -1,6 +1,12 @@
+<form ng-submit="addGame(GameModel)">
+    <input ng-model="GameModel"/>
+    <input type="submit"/>
+</form>
 <ul ng-repeat="game in games">
     <li>
         {{game.title}} ({{game.votes}})
-        <a href="#" ng-click="addVote(game.id)">Add Vote</a>
+        <a ng-click="addVote(game.id)">Add Vote</a>
+        <a ng-click="markOwned(game.id)">Mark as Owned</a>
     </li>
 </ul>
+        {{games[0]}}
