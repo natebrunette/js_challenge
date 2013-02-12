@@ -1,12 +1,11 @@
 'use strict';
 
 /* Controllers */
+function GamesListCtrl($scope, Game) {
+    $scope.games = Game.getGames();
 
-
-function MyCtrl1() {}
-MyCtrl1.$inject = [];
-
-
-function MyCtrl2() {
+    $scope.addVote = function (voteId) {
+        Game.addVote({id: voteId});
+    };
 }
-MyCtrl2.$inject = [];
+

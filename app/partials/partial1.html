@@ -1,1 +1,6 @@
-<p>This is the partial for view 1.</p>
+<ul ng-repeat="game in games">
+    <li>
+        {{game.title}} ({{game.votes}})
+        <a href="#" ng-click="addVote(game.id)">Add Vote</a>
+    </li>
+</ul>
